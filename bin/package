@@ -22,5 +22,4 @@ git show HEAD:COPYING.txt > $tmp/COPYING.txt
 
 cd $tmp
 mkdir -p $root/dist
-zip -qr9 pkg_evalor.zip COPYING.txt README.txt pkg_evalor.xml packages/
-zip -qr9 $root/dist/evalor-joomla.zip pkg_evalor.zip README.txt
+zip -qr9 $root/dist/pkg_evalor.zip COPYING.txt README.txt pkg_evalor.xml packages/

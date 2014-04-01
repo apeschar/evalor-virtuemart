@@ -8,7 +8,7 @@ $doc->addStyleSheet('components/com_evalor/evalor.css');
  
 jimport('joomla.application.component.controller');
  
-$controller = JController::getInstance('eValor');
+$controller = JControllerLegacy::getInstance('eValor');
  
 $jinput = JFactory::getApplication()->input;
 $task = $jinput->get('task', "", 'STR' );

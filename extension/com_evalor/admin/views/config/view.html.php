@@ -4,7 +4,7 @@ defined('_JEXEC') or die('Restricted access');
  
 jimport('joomla.application.component.view');
 
-class eValorViewConfig extends JView {
+class eValorViewConfig extends JViewLegacy {
     function display($tpl = null) {
         $this->config = $this->get('Config');
         $this->virtuemart = $this->get('VirtueMart');

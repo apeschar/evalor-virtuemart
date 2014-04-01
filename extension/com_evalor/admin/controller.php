@@ -4,7 +4,7 @@ defined('_JEXEC') or die('Restricted access');
  
 jimport('joomla.application.component.controller');
  
-class eValorController extends JController {
+class eValorController extends JControllerLegacy {
     private $wwk_fields = array(
         'wwk_shop_id',
         'wwk_api_key',
@@ -38,6 +38,7 @@ class eValorController extends JController {
 
     private function doApply() {
         $config = $this->get('Config');
+        $errors = array();
 
         foreach($this->wwk_fields as $field_name) {
             $value = @$_POST['webwinkelkeur_' . $field_name];
