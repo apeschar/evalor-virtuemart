@@ -143,7 +143,7 @@ class PlgSystemEValor extends JPlugin {
                         `reported` = 0
                 ");
                 $db->query();
-                $app->enqueueMessage("De eValor uitnodiging voor order {$order['order_number']} kon niet worden verstuurd. -- $error", 'error');
+                $app->enqueueMessage("Ha habido un error al enviar la invitación de eValor. -- $error", 'error');
             }
         }
     }

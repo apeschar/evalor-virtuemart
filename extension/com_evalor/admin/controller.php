@@ -51,12 +51,12 @@ class eValorController extends JController {
         }
 
         if(empty($config['wwk_shop_id']))
-            $errors[] = 'Uw webwinkel ID is verplicht.';
+            $errors[] = 'Su ID de tienda es obligatorio.';
         elseif(!ctype_digit($config['wwk_shop_id']))
-            $errors[] = 'Uw webwinkel ID kan alleen cijfers bevatten.';
+            $errors[] = 'Su ID de tienda solo puede contener números.';
 
         if($config['invite'] && !$config['wwk_api_key'])
-            $errors[] = 'Om uitnodigingen te versturen is uw API key verplicht.';
+            $errors[] = 'Para enviar invitaciones es obligatoria su clave API.';
 
         $application = JFactory::getApplication();
 
@@ -65,9 +65,9 @@ class eValorController extends JController {
 
         if(!$errors) {
             if($this->getModel('config')->setConfig($config))
-                $application->enqueueMessage('Uw wijzigingen zijn opgeslagen.');
+                $application->enqueueMessage('Sus cambios han sido guardados.');
             else
-                $application->enqueueMessage('Uw wijzigingen konden niet worden opgeslagen.', 'error');
+                $application->enqueueMessage('Error: could not save changes.', 'error');
         }
 
         return !$errors;

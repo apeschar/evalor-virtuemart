@@ -10,94 +10,94 @@ $config = $this->config;
 <form action="<?php echo JRoute::_('index.php?option=com_evalor'); ?>" method="POST" name="adminForm" id="adminForm">
     <table class="wwk-form">
         <tr valign="top">
-            <th scope="row"><label for="wwk-shop-id">Webwinkel ID</label></th>
+            <th scope="row"><label for="wwk-shop-id">ID de la tienda online</label></th>
             <td><input name="webwinkelkeur_wwk_shop_id" type="text" id="wwk-shop-id" value="<?php echo htmlspecialchars($config['wwk_shop_id'], ENT_QUOTES, 'UTF-8'); ?>" class="regular-text" /></td>
         </tr>
         <tr valign="top">
-            <th scope="row"><label for="wwk-api-key">API key</label></th>
+            <th scope="row"><label for="wwk-api-key">Clave API</label></th>
             <td><input name="webwinkelkeur_wwk_api_key" type="text" id="wwk-api-key" value="<?php echo htmlspecialchars($config['wwk_api_key'], ENT_QUOTES, 'UTF-8'); ?>" class="regular-text" />
             <p class="description">
-            Deze gegevens vindt u na het inloggen op <a href="https://www.evalor.es/tienda/" target="_blank">eValor.es</a>.<br />Klik op 'Keurmerk plaatsen'. De gegevens zijn vervolgens onderaan deze pagina te vinden.
+            Estos datos los encontrará al ingresar en <a href="https://www.evalor.es/tienda/" target="_blank">eValor.es.</a><br />Haz click en "Colocar sello". Encontrará estos datos en la parte inferior de la página.
             </p>
             </td>
         </tr>
         <tr valign="top">
-            <th scope="row"><label for="webwinkelkeur-sidebar">Sidebar weergeven</label></th>
+            <th scope="row"><label for="webwinkelkeur-sidebar">Mostrar sidebar</label></th>
             <td>
                 <label>
                     <input type="checkbox" id="webwinkelkeur-sidebar" name="webwinkelkeur_sidebar" value="1" <?php if($config['sidebar']) echo 'checked'; ?> />
-                    Ja, voeg de eValor Sidebar toe aan mijn website.
+                    Sí, añadir el sidebar de eValor a mi web.
                 </label>
             </td>
         </tr> 
         <tr valign="top">
-            <th scope="row">Sidebar positie</th>
+            <th scope="row">Posición sidebar</th>
             <td>
                 <fieldset>
                     <label>
                         <input type="radio" name="webwinkelkeur_sidebar_position" value="left" <?php if($config['sidebar_position'] == 'left') echo 'checked'; ?> />
-                        Links
+                        Izquierda                       
                     </label><br>
                     <label>
                         <input type="radio" name="webwinkelkeur_sidebar_position" value="right" <?php if($config['sidebar_position'] == 'right') echo 'checked'; ?> />
-                        Rechts
+                        Derecha
                     </label>
                 </fieldset>
             </td>
         </tr> 
         <tr valign="top">
-            <th scope="row"><label for="webwinkelkeur-sidebar-top">Sidebar hoogte</label></th>
+            <th scope="row"><label for="webwinkelkeur-sidebar-top">Altura sidebar</label></th>
             <td><input name="webwinkelkeur_sidebar_top" type="text" id="webwinkelkeur-sidebar-top" value="<?php echo htmlspecialchars($config['sidebar_top'], ENT_QUOTES, 'UTF-8'); ?>" class="small-text" />
             <p class="description">
-            Aantal pixels vanaf de bovenkant.
+            Número de pixeles desde arriba.
             </p>
             </td>
         </tr>
         <?php if($this->virtuemart): ?>
         <tr valign="top">
-            <th scope="row">Uitnodigingen versturen</th>
+            <th scope="row">Enviar invitaciones</th>
             <td>
                 <fieldset>
                     <label>
                         <input type="radio" name="webwinkelkeur_invite" value="1" <?php if($config['invite'] == 1) echo 'checked'; ?> />
-                        Ja, na elke bestelling.
+                        Sí, después de cada pedido.
                     </label><br>
                     <label>
                         <input type="radio" name="webwinkelkeur_invite" value="2" <?php if($config['invite'] == 2) echo 'checked'; ?> />
-                        Ja, alleen bij de eerste bestelling.
+                        Sí, sólo con el primer pedido.
                     </label><br>
                     <label>
                         <input type="radio" name="webwinkelkeur_invite" value="0" <?php if(!$config['invite']) echo 'checked'; ?> />
-                        Nee, geen uitnodigingen versturen.
+                        No, no enviar invitaciones.
                     </label>
                 </fieldset>
-                <p class="description">Deze functionaliteit is alleen beschikbaar voor Plus-leden.</p>
+                <p class="description">Esta función solo está disponible para socios PLUS.</p>
             </td>
         </tr> 
         <tr valign="top">
-            <th scope="row"><label for="webwinkelkeur-invite-delay">Wachttijd voor uitnodiging</label></th>
+            <th scope="row"><label for="webwinkelkeur-invite-delay">Plazo para la invitación</label></th>
             <td><input name="webwinkelkeur_invite_delay" type="text" id="webwinkelkeur-invite-delay" value="<?php echo htmlspecialchars($config['invite_delay'], ENT_QUOTES, 'UTF-8'); ?>" class="small-text" />
             <p class="description">
-            De uitnodiging wordt verstuurd nadat het opgegeven aantal dagen is verstreken na het verzenden van de bestelling.
+            La invitación se envía una vez hayan pasado el número de días indicados después de enviar el pedido. 
             </p>
             </td>
         </tr>
         <?php endif; ?>
         <tr valign="top">
-            <th scope="row"><label for="webwinkelkeur-tooltip">Tooltip weergeven</label></th>
+            <th scope="row"><label for="webwinkelkeur-tooltip">Mostrar logo desplegable</label></th>
             <td>
                 <label>
                     <input type="checkbox" id="webwinkelkeur-tooltip" name="webwinkelkeur_tooltip" value="1" <?php if($config['tooltip']) echo 'checked'; ?> />
-                    Ja, voeg de eValor Tooltip toe aan mijn website.
+                    Sí, añadir el logo desplegable eValor a mi sitio web.
                 </label>
             </td>
         </tr> 
         <tr valign="top">
-            <th scope="row"><label for="webwinkelkeur-javascript">JavaScript-integratie</label></th>
+            <th scope="row"><label for="webwinkelkeur-javascript">Integración JavaScript</label></th>
             <td>
                 <label>
                     <input type="checkbox" id="webwinkelkeur-javascript" name="webwinkelkeur_javascript" value="1" <?php if($config['javascript']) echo 'checked'; ?> />
-                    Ja, voeg de eValor JavaScript toe aan mijn website.
+                    Sí, añadir el JavaScript de eValor a mi sitio web. 
                 </label>
             </td>
         </tr> 
