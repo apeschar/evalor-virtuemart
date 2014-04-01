@@ -4,7 +4,7 @@ defined('_JEXEC') or die('Restricted access');
  
 jimport('joomla.application.component.controller');
  
-class WebwinkelKeurController extends JController {
+class eValorController extends JController {
     private $wwk_fields = array(
         'wwk_shop_id',
         'wwk_api_key',
@@ -23,14 +23,14 @@ class WebwinkelKeurController extends JController {
         $input->set('view', $input->getCmd('view', 'Config'));
 
         // add toolbar
-        JToolBarHelper::title('WebwinkelKeur', 'webwinkelkeur');
+        JToolBarHelper::title('eValor', 'webwinkelkeur');
         JToolBarHelper::apply();
         JToolBarHelper::save();
         JToolBarHelper::cancel('cancel', 'JTOOLBAR_CLOSE');
 
         // set document title
         $doc = JFactory::getDocument();
-        $doc->setTitle('WebwinkelKeur');
+        $doc->setTitle('eValor');
 
         // call parent behavior
         parent::display($cachable);

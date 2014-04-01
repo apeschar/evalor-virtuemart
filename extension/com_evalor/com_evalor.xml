@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="component" version="2.5.0" method="upgrade">
-    <name>WebwinkelKeur</name>
+    <name>eValor</name>
     <version>1.0.0</version>
     <creationDate>March 2014</creationDate>
     <author>Albert Peschar</author>
@@ -17,22 +17,22 @@
             <file driver="mysql" charset="utf8">sql/uninstall.sql</file>
         </sql>
     </uninstall>
-    <media destination="com_webwinkelkeur" folder="media">
+    <media destination="com_evalor" folder="media">
         <folder>images</folder>
     </media>
     <administration>
-        <menu img="../media/com_webwinkelkeur/images/logo16.png">COM_WEBWINKELKEUR_MENU</menu>
+        <menu img="../media/com_evalor/images/logo16.png">COM_EVALOR_MENU</menu>
         <files folder="admin">
-            <filename>webwinkelkeur.php</filename>
-            <filename>webwinkelkeur.css</filename>
+            <filename>evalor.php</filename>
+            <filename>evalor.css</filename>
             <filename>controller.php</filename>
             <folder>views</folder>
             <folder>models</folder>
             <folder>sql</folder>
         </files>
         <languages folder="admin">
-            <language tag="en-GB">language/en-GB.com_webwinkelkeur.sys.ini</language>
-            <language tag="nl-NL">language/nl-NL.com_webwinkelkeur.sys.ini</language>
+            <language tag="en-GB">language/en-GB.com_evalor.sys.ini</language>
+            <language tag="nl-NL">language/nl-NL.com_evalor.sys.ini</language>
         </languages>
     </administration>
 </extension>

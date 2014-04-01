@@ -2,7 +2,7 @@
 
 defined('_JEXEC') or die('Restricted access');
 
-class PlgSystemWebwinkelKeur extends JPlugin {
+class PlgSystemEValor extends JPlugin {
     private $config;
 
     public function onBeforeCompileHead() {
@@ -20,7 +20,7 @@ class PlgSystemWebwinkelKeur extends JPlugin {
     private function getConfig() {
         if(!isset($this->config)) {
             $db = JFactory::getDBO();
-            $db->setQuery("SELECT `value` FROM `#__webwinkelkeur_config` WHERE `id` = 1");
+            $db->setQuery("SELECT `value` FROM `#__evalor_config` WHERE `id` = 1");
             $result = $db->loadResult();
             if($result) {
                 $this->config = @json_decode($result, true);
@@ -87,7 +87,7 @@ class PlgSystemWebwinkelKeur extends JPlugin {
             FROM `#__virtuemart_orders` vo
             INNER JOIN `#__virtuemart_order_userinfos` vou ON
                 vou.virtuemart_order_id = vo.virtuemart_order_id
-            LEFT JOIN `#__webwinkelkeur_virtuemart_order` wvo ON
+            LEFT JOIN `#__evalor_virtuemart_order` wvo ON
                 wvo.virtuemart_order_id = vo.virtuemart_order_id
             WHERE
                 (
@@ -122,7 +122,7 @@ class PlgSystemWebwinkelKeur extends JPlugin {
             $now = time();
 
             $db->setQuery("
-                INSERT INTO `#__webwinkelkeur_virtuemart_order` SET
+                INSERT INTO `#__evalor_virtuemart_order` SET
                     `virtuemart_order_id` = " . (int) $order['virtuemart_order_id'] . ",
                     `success` = " . ($error ? '0' : '1') . ",
                     `tries` = 1,
@@ -136,14 +136,14 @@ class PlgSystemWebwinkelKeur extends JPlugin {
 
             if($error) {
                 $db->setQuery("
-                    INSERT INTO `#__webwinkelkeur_invite_error` SET
+                    INSERT INTO `#__evalor_invite_error` SET
                         `url` = " . $db->quote($url) . ",
                         `response` = " . $db->quote($error) . ",
                         `time` = " . $now . ",
                         `reported` = 0
                 ");
                 $db->query();
-                $app->enqueueMessage("De WebwinkelKeur uitnodiging voor order {$order['order_number']} kon niet worden verstuurd. -- $error", 'error');
+                $app->enqueueMessage("De eValor uitnodiging voor order {$order['order_number']} kon niet worden verstuurd. -- $error", 'error');
             }
         }
     }

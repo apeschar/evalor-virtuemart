@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="plugin" version="2.5.0" group="system" method="upgrade">
-    <name>WebwinkelKeur</name>
+    <name>eValor</name>
     <version>1.0.0</version>
     <creationDate>March 2014</creationDate>
     <author>Albert Peschar</author>
@@ -8,9 +8,9 @@
     <authorUrl>https://peschar.net</authorUrl>
     <copyright>(C) 2014 Albert Peschar</copyright>
     <files>
-        <filename plugin="webwinkelkeur">webwinkelkeur.php</filename>
-        <filename plugin="webwinkelkeur">sidebar.php</filename>
-        <filename plugin="webwinkelkeur">URLRetriever.php</filename>
-        <filename plugin="webwinkelkeur">api.php</filename>
+        <filename plugin="evalor">evalor.php</filename>
+        <filename plugin="evalor">sidebar.php</filename>
+        <filename plugin="evalor">URLRetriever.php</filename>
+        <filename plugin="evalor">api.php</filename>
     </files>
 </extension>

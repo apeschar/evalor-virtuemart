@@ -7,7 +7,7 @@ JHtml::_('behavior.tooltip');
 $config = $this->config;
 
 ?>
-<form action="<?php echo JRoute::_('index.php?option=com_webwinkelkeur'); ?>" method="POST" name="adminForm" id="adminForm">
+<form action="<?php echo JRoute::_('index.php?option=com_evalor'); ?>" method="POST" name="adminForm" id="adminForm">
     <table class="wwk-form">
         <tr valign="top">
             <th scope="row"><label for="wwk-shop-id">Webwinkel ID</label></th>
@@ -17,7 +17,7 @@ $config = $this->config;
             <th scope="row"><label for="wwk-api-key">API key</label></th>
             <td><input name="webwinkelkeur_wwk_api_key" type="text" id="wwk-api-key" value="<?php echo htmlspecialchars($config['wwk_api_key'], ENT_QUOTES, 'UTF-8'); ?>" class="regular-text" />
             <p class="description">
-            Deze gegevens vindt u na het inloggen op <a href="https://www.webwinkelkeur.nl/webwinkel/" target="_blank">WebwinkelKeur.nl</a>.<br />Klik op 'Keurmerk plaatsen'. De gegevens zijn vervolgens onderaan deze pagina te vinden.
+            Deze gegevens vindt u na het inloggen op <a href="https://www.evalor.es/tienda/" target="_blank">eValor.es</a>.<br />Klik op 'Keurmerk plaatsen'. De gegevens zijn vervolgens onderaan deze pagina te vinden.
             </p>
             </td>
         </tr>
@@ -26,7 +26,7 @@ $config = $this->config;
             <td>
                 <label>
                     <input type="checkbox" id="webwinkelkeur-sidebar" name="webwinkelkeur_sidebar" value="1" <?php if($config['sidebar']) echo 'checked'; ?> />
-                    Ja, voeg de WebwinkelKeur Sidebar toe aan mijn website.
+                    Ja, voeg de eValor Sidebar toe aan mijn website.
                 </label>
             </td>
         </tr> 
@@ -88,7 +88,7 @@ $config = $this->config;
             <td>
                 <label>
                     <input type="checkbox" id="webwinkelkeur-tooltip" name="webwinkelkeur_tooltip" value="1" <?php if($config['tooltip']) echo 'checked'; ?> />
-                    Ja, voeg de WebwinkelKeur Tooltip toe aan mijn website.
+                    Ja, voeg de eValor Tooltip toe aan mijn website.
                 </label>
             </td>
         </tr> 
@@ -97,7 +97,7 @@ $config = $this->config;
             <td>
                 <label>
                     <input type="checkbox" id="webwinkelkeur-javascript" name="webwinkelkeur_javascript" value="1" <?php if($config['javascript']) echo 'checked'; ?> />
-                    Ja, voeg de WebwinkelKeur JavaScript toe aan mijn website.
+                    Ja, voeg de eValor JavaScript toe aan mijn website.
                 </label>
             </td>
         </tr> 

@@ -10,16 +10,16 @@ tmp=`mktemp -d -t virtuemart`
 trap "rm -rf '$tmp'" EXIT
 mkdir $tmp/packages
 
-cd $root/extension/com_webwinkelkeur
-git archive -0 -o $tmp/packages/com_webwinkelkeur.zip HEAD .
+cd $root/extension/com_evalor
+git archive -0 -o $tmp/packages/com_evalor.zip HEAD .
 
-cd $root/extension/plg_sys_webwinkelkeur
-git archive -0 -o $tmp/packages/plg_sys_webwinkelkeur.zip HEAD .
+cd $root/extension/plg_sys_evalor
+git archive -0 -o $tmp/packages/plg_sys_evalor.zip HEAD .
 
-git show HEAD:extension/pkg_webwinkelkeur.xml > $tmp/pkg_webwinkelkeur.xml
+git show HEAD:extension/pkg_evalor.xml > $tmp/pkg_evalor.xml
 git show HEAD:README.txt > $tmp/README.txt
 
 cd $tmp
 mkdir -p $root/dist
-zip -qr9 pkg_webwinkelkeur.zip pkg_webwinkelkeur.xml packages/
-zip -qr9 $root/dist/webwinkelkeur-joomla.zip pkg_webwinkelkeur.zip README.txt
+zip -qr9 pkg_evalor.zip pkg_evalor.xml packages/
+zip -qr9 $root/dist/evalor-joomla.zip pkg_evalor.zip README.txt
