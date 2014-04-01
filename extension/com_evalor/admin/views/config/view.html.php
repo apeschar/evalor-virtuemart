@@ -10,7 +10,7 @@ class eValorViewConfig extends JViewLegacy {
         $this->virtuemart = $this->get('VirtueMart');
 
         if(!$this->virtuemart) {
-            JFactory::getApplication()->enqueueMessage('Om uitnodigingen te versturen moet VirtueMart zijn geïnstalleerd.', 'notice');
+            JFactory::getApplication()->enqueueMessage('Instale y active VirtuaMart para poder enviar invitaciones.', 'notice');
         }
 
         parent::display($tpl);
