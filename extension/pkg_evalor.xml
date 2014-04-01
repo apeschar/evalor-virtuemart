@@ -10,7 +10,7 @@
     <authorEmail>albert@peschar.net</authorEmail>
     <authorUrl>https://peschar.net</authorUrl>
     <copyright>(C) 2014 Albert Peschar</copyright>
-    <description>De Joomla extensie zorgt voor een eenvoudige integratie van eValor binnen jouw webwinkel. Hiermee is het heel eenvoudig om de innovatieve eValor Sidebar in jouw Joomla website of VirtueMart webwinkel te integreren. Wanneer je VirtueMart gebruikt, kunnen er bovendien automatisch uitnodigingen naar je klanten worden gestuurd.</description>
+    <description>El módulo WordPress facilita la integración del innovador sidebar de eValor en su web WordPress o tienda WooCommerce. Para los usuarios del WooCommerce Plugin para WordPress el módulo se encarga de invitar de forma automática a los clientes para que compartan su experiencia. Esta funcion solo esta disponible para clientes PLUS. Cuando el proceso del pedido ha finalizado se envia automaticamente una invitacion al cliente para que comparta su experiencia. Asi se genera confianza y aumenta la conversion de su tienda online.</description>
     <files folder="packages">
         <file type="plugin" id="evalor" group="system">plg_sys_evalor.zip</file>
         <file type="component" id="com_evalor">com_evalor.zip</file>
