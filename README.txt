@@ -1,28 +1,36 @@
-eValor Joomla en VirtueMart module
-==================================
+Módulo VirtueMart y Joomla para eValor
+======================================
 
-Deze module integreert de eValor sidebar in uw Joomla website en/of VirtueMart
-webshop. De module kan eenvoudig worden geïnstalleerd. Gebruik daarvoor de
-onderstaande installatieinstructies.
+Este módulo integra el módulo sidebar eValor en su web Joomla y/o su tienda
+online VirtueMart. Este módulo es fácil de instalar. Para eso puede utilizar
+las instrucciones.
 
-De module is getest met Joomla versie 2.5 en 3.2 en met VirtueMart versie 2.
+Este módulo ha sido comprobado con Joomla versión 2.5 y 3.2 y con VirtueMart
+versión 2.
 
-(C) 2013 Albert Peschar <albert@peschar.net>
+(C) 2014 Albert Peschar <albert@peschar.net>
 
 
-Installatieinstructies
-----------------------
+Instrucciones de instalación
+----------------------------
 
-    1. Open de Joomla administratieinterface.
+    1. Descargar el módulo Joomla/Virtuemart
 
-    2. Ga naar "Extensiebeheer" in het menu "Extensies".
+    2. Se recomienda una copia de seguridad de su tienda online antes de
+    comenzar con la instalación.
 
-    3. Kies bij "Pakketbestand" het bestand "pkg_evalor.zip".
+    3. Abra el panel de control de Joomla.
 
-    4. Klik op "Uploaden & installeren".
+    4. Vaya a "gestión de extensiones" en el menu de "extensiones".
 
-    5. Ga naar "eValor" in het menu "Componenten" en configureer de
-    module.
+    5. Seleccione en ficheros el fichero "pkg_evalor.zip".
 
-    6. Controleer of de sidebar op uw site wordt getoond.
+    6. Seleccione subir e instalar.
+
+    7. Vaya a eValor en el menú componentes y configure el módulo.
+
+    8. Compruebe si el sidebar se muestra en su web.
+
+    9. Compruebe si funciona correctamente su tienda online y realice un pedido
+    de prueba.
 
